@@ -1,3 +1,3 @@
 print("text")
 print("привет")
-print("2121")
+print("21221")
