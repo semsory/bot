@@ -7,10 +7,12 @@ db = SQLAlchemy(app)
 
 from models import Task
 
+
 @app.route("/")
 def index():
     tasks = Task.query.all()
     return render_template("index.html", tasks=tasks)
+
 
 @app.route("/add", methods=["POST"])
 def add_task():
@@ -20,12 +22,14 @@ def add_task():
         db.session.commit()
     return redirect("/")
 
+
 @app.route("/delete/<int:task_id>")
 def delete_task(task_id):
     task = Task.query.get(task_id)
     db.session.delete(task)
     db.session.commit()
     return redirect("/")
+
 
 @app.route("/bogdan")
 def bogdan_page():
