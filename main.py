@@ -27,3 +27,11 @@ def delete_task(task_id):
     db.session.commit()
     return redirect("/")
 
+@app.route("/bogdan")
+def bogdan_page():
+    pass
+
+
+@app.route("/mihail")
+def mihail_page():
+    pass
