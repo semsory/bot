@@ -39,3 +39,4 @@ def bogdan_pageю():
 def mihail_page():
     return render_template("bio.html")
 
+app.run()
