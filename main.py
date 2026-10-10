@@ -31,12 +31,11 @@ def delete_task(task_id):
 
 
 @app.route("/bogdan")
-def bogdan_page():
+def bogdan_pageю():
     return render_template("bogdan.html")
 
 
 @app.route("/mihail")
 def mihail_page():
     return render_template("bio.html")
-.
 
