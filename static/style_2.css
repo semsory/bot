@@ -148,3 +148,8 @@ h1 {
 .list-group-item span {
   color: #ffffff;
 }
+.form-control:focus,
+.form-control {
+  color: #ffffff;
+}
+
