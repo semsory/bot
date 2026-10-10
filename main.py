@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from config import app,db
-
-
 from models import Task
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db'
+db = SQLAlchemy(app)
 
 
 @app.route("/")
@@ -29,8 +30,6 @@ def delete_task(task_id):
     return redirect("/")
 
 
-
-
 @app.route("/bogdan")
 def bogdan_page():
     pass
@@ -39,5 +38,3 @@ def bogdan_page():
 @app.route("/mihail")
 def mihail_page():
     pass
-
-app.run()
