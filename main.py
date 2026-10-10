@@ -32,9 +32,10 @@ def delete_task(task_id):
 
 @app.route("/bogdan")
 def bogdan_page():
-    pass
+    return render_template("bogdan.html")
 
 
 @app.route("/mihail")
 def mihail_page():
-    pass
+    return render_template("bio.html")
+
