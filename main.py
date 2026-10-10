@@ -39,7 +39,7 @@ def bogdan_pag():
     return render_template("bogdan.html")
 
 
-@app.route("/mihail")
+@app.route("/bio")
 def mihail_page():
     return render_template("bio.html")
 
