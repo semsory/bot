@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from models import Task
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db'
 db = SQLAlchemy(app)
+
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
 
 
 @app.route("/")
@@ -39,4 +43,9 @@ def bogdan_pageю():
 def mihail_page():
     return render_template("bio.html")
 
-app.run()
+
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()  # Создает файл tasks.db, чтобы не было ошибок
+    app.run(debug=True)
+
