@@ -38,4 +38,5 @@ def bogdan_page():
 @app.route("/mihail")
 def mihail_page():
     return render_template("bio.html")
+.
 
