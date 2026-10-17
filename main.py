@@ -35,7 +35,7 @@ def delete_task(task_id):
 
 
 @app.route("/bogdan")
-def bogdan_pag():
+def bogdan_page():
     return render_template("bogdan.html")
 
 
